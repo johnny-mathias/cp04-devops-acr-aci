@@ -1,6 +1,6 @@
 # CP04 de Cloud & DevOps - ACR e ACI
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#cp04-de-cloud--devops---acr-e-aci)
+
 
 Java repo: https://github.com/yJoaoVictor10/apiMovies-rm563409.git
 
@@ -12,7 +12,6 @@ MySQL repo: https://github.com/yJoaoVictor10/mysqlMovies-rm563409.git
 
 ## 📦 1. Clonando os repositórios
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-1-clonando-os-reposit%C3%B3rios)
 
 -- Clona os repositórios da API e do banco de dados
 
@@ -21,7 +20,6 @@ git clone https://github.com/yJoaoVictor10/apiMovies-rm563409.git
 git clone https://github.com/yJoaoVictor10/mysqlMovies-rm563409.git
 ```
 
-**svg**
 
 ---
 
@@ -29,7 +27,6 @@ git clone https://github.com/yJoaoVictor10/mysqlMovies-rm563409.git
 
 ## 🐳 2. Criando as imagens Docker
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-2-criando-as-imagens-docker)
 
 -- Acessa os projetos e cria as imagens Docker da aplicação e do MySQL
 
@@ -41,19 +38,16 @@ cd ../apiMovies-rm563409
 docker build -f Dockerfile.api -t spring-movies .
 ```
 
-**svg**
 
 ---
 
 # ☁️ Deploy no Microsoft Azure
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#%EF%B8%8F-deploy-no-microsoft-azure)
 
 #### ☁️ Azure CLI
 
 ## 🔐 3. Login no Azure
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-3-login-no-azure)
 
 -- Realiza o login na conta do Azure
 
@@ -61,7 +55,6 @@ docker build -f Dockerfile.api -t spring-movies .
 az login
 ```
 
-**svg**
 
 ---
 
@@ -69,7 +62,6 @@ az login
 
 ## 👤 4. Verificando a conta
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-4-verificando-a-conta)
 
 -- Exibe os dados da conta e da assinatura ativa no Azure
 
@@ -77,7 +69,6 @@ az login
 az account show
 ```
 
-**svg**
 
 ---
 
@@ -85,7 +76,6 @@ az account show
 
 ## 📁 5. Criando o Resource Group
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-5-criando-o-resource-group)
 
 -- Cria o grupo de recursos no Azure na região especificada
 
@@ -95,7 +85,6 @@ az group create \
     --location chilecentral
 ```
 
-**svg**
 
 ### Caso ocorra erro
 
@@ -104,7 +93,6 @@ az account list -o table
 az account set --subscription <nome ou id>
 ```
 
-**svg**
 
 > ⚠️ **Atenção:** altere a localização (`--location`) conforme a política definida pelo professor.
 
@@ -112,13 +100,11 @@ az account set --subscription <nome ou id>
 
 # 📦 Azure Container Registry
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-azure-container-registry)
 
 #### ☁️ Azure CLI
 
 ## 6. Registrando o Container Registry
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#6-registrando-o-azure-container-registry)
 
 -- Registra o provedor do Azure Container Registry
 
@@ -126,7 +112,6 @@ az account set --subscription <nome ou id>
 az provider register --namespace Microsoft.ContainerRegistry
 ```
 
-**svg**
 
 ---
 
@@ -134,7 +119,6 @@ az provider register --namespace Microsoft.ContainerRegistry
 
 ## 7. Criando o Azure Container Registry
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#7-criando-o-azure-container-registry)
 
 -- Cria um Azure Container Registry para armazenar as imagens Docker
 
@@ -148,7 +132,6 @@ az acr create \
     --admin-enabled true
 ```
 
-**svg**
 
 > ⚠️ **Antes de executar:** confira o **RM**, o nome do Resource Group e a localização.
 
@@ -158,7 +141,6 @@ az acr create \
 
 ## 🔑 8. Obtendo as credenciais do Registry
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-8-obtendo-as-credenciais-do-registry)
 
 -- Obtém e exibe o endereço de acesso ao Azure Container Registry
 
@@ -174,7 +156,6 @@ echo "Login Server: $LOGIN_SERVER"
 echo ""
 ```
 
-**svg**
 
 -- Obtém e exibe as credenciais administrativas do Azure Container Registry
 
@@ -195,7 +176,6 @@ echo "Username: $ADMIN_USERNAME" && \
 echo "Password: $ADMIN_PASSWORD"
 ```
 
-**svg**
 
 ---
 
@@ -203,7 +183,6 @@ echo "Password: $ADMIN_PASSWORD"
 
 ## 🔐 9. Login no Container Registry
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-9-login-no-container-registry)
 
 -- Realiza o login no Azure Container Registry usando o Azure CLI e o Docker
 
@@ -215,19 +194,16 @@ docker login acrspringrm563409.azurecr.io \
     -p $ADMIN_PASSWORD
 ```
 
-**svg**
 
 ---
 
 # 🚀 Enviando as imagens para o Azure
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-enviando-as-imagens-para-o-azure)
 
 #### 🖥️ VM
 
 ## 10. Verificando as imagens Docker
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#10-verificando-as-imagens-docker)
 
 -- Lista as imagens Docker disponíveis localmente
 
@@ -235,7 +211,6 @@ docker login acrspringrm563409.azurecr.io \
 docker image ls
 ```
 
-**svg**
 
 ---
 
@@ -243,7 +218,6 @@ docker image ls
 
 ## 11. Criando a tag da API
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#11-criando-a-tag-da-api)
 
 -- Adiciona uma tag à imagem da API para prepará-la para o envio ao registry
 
@@ -252,7 +226,6 @@ docker tag spring-movies \
     acrspringrm563409.azurecr.io/spring-movies:v1
 ```
 
-**svg**
 
 ---
 
@@ -260,7 +233,6 @@ docker tag spring-movies \
 
 ## 12. Enviando a API para o Registry
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#12-enviando-a-api-para-o-registry)
 
 -- Envia a imagem da API para o Azure Container Registry
 
@@ -268,7 +240,6 @@ docker tag spring-movies \
 docker push acrspringrm563409.azurecr.io/spring-movies:v1
 ```
 
-**svg**
 
 ---
 
@@ -276,7 +247,6 @@ docker push acrspringrm563409.azurecr.io/spring-movies:v1
 
 ## 13. Enviando o MySQL para o Registry
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#13-enviando-o-mysql-para-o-registry)
 
 -- Adiciona uma tag à imagem do MySQL e envia a imagem para o registry
 
@@ -287,7 +257,6 @@ docker tag mysql-movies \
 docker push acrspringrm563409.azurecr.io/mysql-movies:v1
 ```
 
-**svg**
 
 ---
 
@@ -295,7 +264,6 @@ docker push acrspringrm563409.azurecr.io/mysql-movies:v1
 
 ## 14. Verificando os repositórios
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#14-verificando-os-reposit%C3%B3rios)
 
 -- Lista os repositórios de imagens armazenados no Azure Container Registry
 
@@ -305,7 +273,6 @@ az acr repository list \
     --output table
 ```
 
-**svg**
 
 ---
 
@@ -313,7 +280,6 @@ az acr repository list \
 
 ## 🧹 15. Removendo as imagens locais
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-15-removendo-as-imagens-locais)
 
 -- Remove as imagens do registry da máquina local
 
@@ -322,19 +288,16 @@ docker rmi acrspringrm563409.azurecr.io/spring-movies:v1
 docker rmi acrspringrm563409.azurecr.io/mysql-movies:v1
 ```
 
-**svg**
 
 ---
 
 # 🗄️ Configuração do MySQL
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#%EF%B8%8F-configura%C3%A7%C3%A3o-do-mysql)
 
 #### 🖥️ VM
 
 ## 16. Criando o Storage Account
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#16-criando-o-storage-account)
 
 -- Torna o script executável e executa a configuração do Storage Account
 
@@ -343,7 +306,6 @@ chmod +x 01_store-account.sh
 ./01_store-account.sh > 01_store-account.log
 ```
 
-**svg**
 
 ---
 
@@ -351,7 +313,6 @@ chmod +x 01_store-account.sh
 
 ## 🔐 17. Configurando o Azure Key Vault
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-17-configurando-o-azure-key-vault)
 
 -- Torna o script executável e executa a configuração do Azure Key Vault
 
@@ -360,7 +321,6 @@ chmod +x 02_key-vault.sh
 ./02_key-vault.sh > 02_key-vault.log
 ```
 
-**svg**
 
 ---
 
@@ -368,7 +328,6 @@ chmod +x 02_key-vault.sh
 
 ## 🐬 18. Criando o container MySQL
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-18-criando-o-container-mysql)
 
 -- Torna o script executável e cria o container do MySQL no Azure Container Instances
 
@@ -377,7 +336,6 @@ chmod +x 03_aci-mysql.sh
 ./03_aci-mysql.sh > 03_aci-mysql.log
 ```
 
-**svg**
 
 ---
 
@@ -385,7 +343,6 @@ chmod +x 03_aci-mysql.sh
 
 ## 🔎 19. Acessando o MySQL
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-19-acessando-o-mysql)
 
 -- Acessa o MySQL no container e consulta os filmes armazenados no banco
 
@@ -396,7 +353,6 @@ az container exec \
     --exec-command "mysql -u user-movies -psenha-movies"
 ```
 
-**svg**
 
 -- Seleciona o banco de dados de filmes
 
@@ -404,7 +360,6 @@ az container exec \
 use db-movies;
 ```
 
-**svg**
 
 -- Lista todos os filmes cadastrados
 
@@ -412,19 +367,16 @@ use db-movies;
 select * from movie;
 ```
 
-**svg**
 
 ---
 
 # ☕ Deploy da API Java
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-deploy-da-api-java)
 
 #### 🖥️ VM
 
 ## 20. Criando o container da API
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#20-criando-o-container-da-api)
 
 -- Torna o script executável e cria o container da API Java no Azure
 
@@ -433,7 +385,6 @@ chmod +x 04_aci-api-java.sh
 ./04_aci-api-java.sh > 04_aci-api-java.log
 ```
 
-**svg**
 
 ---
 
@@ -441,7 +392,6 @@ chmod +x 04_aci-api-java.sh
 
 ## 📋 21. Visualizando os logs
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-21-visualizando-os-logs)
 
 -- Exibe os logs do container da API Java
 
@@ -451,7 +401,6 @@ az container logs \
     --name api-java
 ```
 
-**svg**
 
 ---
 
@@ -459,7 +408,6 @@ az container logs \
 
 ## 💻 22. Acessando o container da API
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-22-acessando-o-container-da-api)
 
 -- Abre um terminal Bash dentro do container da API Java
 
@@ -470,19 +418,16 @@ az container exec \
     --exec-command "/bin/bash"
 ```
 
-**svg**
 
 ---
 
 # 🔌 Testando a API
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-testando-a-api)
 
 #### 📦 Container da API
 
 ## GET — Listar filmes
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#get--listar-filmes)
 
 -- Consulta todos os filmes através da API
 
@@ -490,7 +435,6 @@ az container exec \
 curl -X GET http://localhost:8080/movies
 ```
 
-**svg**
 
 ---
 
@@ -498,7 +442,6 @@ curl -X GET http://localhost:8080/movies
 
 ## POST — Cadastrar filme
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#post--cadastrar-filme)
 
 -- Cadastra um novo filme através da API
 
@@ -513,7 +456,6 @@ curl -X POST http://localhost:8080/movies \
 }'
 ```
 
-**svg**
 
 ---
 
@@ -521,7 +463,6 @@ curl -X POST http://localhost:8080/movies \
 
 ## PUT — Atualizar filme
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#put--atualizar-filme)
 
 -- Atualiza os dados de um filme existente através da API
 
@@ -536,7 +477,6 @@ curl -X PUT http://localhost:8080/movies/5 \
 }'
 ```
 
-**svg**
 
 ---
 
@@ -544,7 +484,6 @@ curl -X PUT http://localhost:8080/movies/5 \
 
 ## DELETE — Excluir filme
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#delete--excluir-filme)
 
 -- Exclui um filme através da API
 
@@ -552,13 +491,11 @@ curl -X PUT http://localhost:8080/movies/5 \
 curl -X DELETE http://localhost:8080/movies/5
 ```
 
-**svg**
 
 ---
 
 # 📌 Resumo do fluxo
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#-resumo-do-fluxo)
 
 ```text
 Repositórios Git
@@ -588,11 +525,9 @@ Repositórios Git
   GET / POST / PUT / DELETE
 ```
 
-**svg**
 
 ## ⚠️ Observações importantes
 
-[svg](https://github.com/johnny-mathias/cp04-devops-acr-aci/#%EF%B8%8F-observa%C3%A7%C3%B5es-importantes)
 
 * Substitua `rm563409` pelo seu RM quando necessário.
 * Verifique o **Resource Group** utilizado antes de executar os comandos.
