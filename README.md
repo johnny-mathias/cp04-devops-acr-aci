@@ -405,7 +405,7 @@ chmod +x 04_aci-api-java.sh
 ```bash
 az container logs \
     --resource-group rg-movies-rm563409 \
-    --name api-java
+    --name rm563409-api-java
 ```
 
 
