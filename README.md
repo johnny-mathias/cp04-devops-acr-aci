@@ -289,6 +289,14 @@ docker rmi acrspringrm563409.azurecr.io/mysql-movies:v1
 ```
 
 
+E para o passo a seguir saia da VM:
+
+## ☁️ Saia da VM:
+```bash
+exit
+```
+
+
 ---
 
 # 🗄️ Configuração do MySQL
