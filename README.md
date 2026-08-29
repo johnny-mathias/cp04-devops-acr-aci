@@ -44,7 +44,7 @@ docker build -f Dockerfile.api -t spring-movies .
 # ☁️ Deploy no Microsoft Azure
 
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 🔐 3. Login no Azure
 
@@ -58,7 +58,7 @@ az login
 
 ---
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 👤 4. Verificando a conta
 
@@ -72,7 +72,7 @@ az account show
 
 ---
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 📁 5. Criando o Resource Group
 
@@ -101,7 +101,7 @@ az account set --subscription <nome ou id>
 # 📦 Azure Container Registry
 
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 6. Registrando o Container Registry
 
@@ -115,7 +115,7 @@ az provider register --namespace Microsoft.ContainerRegistry
 
 ---
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 7. Criando o Azure Container Registry
 
@@ -137,7 +137,7 @@ az acr create \
 
 ---
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 🔑 8. Obtendo as credenciais do Registry
 
@@ -260,7 +260,7 @@ docker push acrspringrm563409.azurecr.io/mysql-movies:v1
 
 ---
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 14. Verificando os repositórios
 
@@ -339,7 +339,7 @@ chmod +x 03_aci-mysql.sh
 
 ---
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 🔎 19. Acessando o MySQL
 
@@ -388,7 +388,7 @@ chmod +x 04_aci-api-java.sh
 
 ---
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 📋 21. Visualizando os logs
 
@@ -404,7 +404,7 @@ az container logs \
 
 ---
 
-#### ☁️ Azure CLI
+#### 🖥️ VM
 
 ## 💻 22. Acessando o container da API
 
