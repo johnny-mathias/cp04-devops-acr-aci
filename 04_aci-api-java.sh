@@ -10,10 +10,8 @@ imageName="spring-movies"
 tag="v1"
 keyVaultName="keyvault-$rm"
 mysqlURL=$(az container show --resource-group $resourceGroup --name $aciNameMysql --query ipAddress.fqdn --output tsv)
-
 # Registra o Serviço de ACI na Assintaura
 az provider register --namespace Microsoft.ContainerInstance
-
 # Deploy do Container Api de Java
 az container create \
   --resource-group $resourceGroup \
