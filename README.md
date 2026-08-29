@@ -81,7 +81,7 @@ az account show
 
 ```bash
 az group create \
-    --name acrspringrm563409 \
+    --name rg-movies-rm563409 \
     --location chilecentral
 ```
 
