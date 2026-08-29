@@ -327,7 +327,7 @@ chmod +x 01_store-account.sh
 ```bash
 chmod +x 02_key-vault.sh
 ./02_key-vault.sh 
-
+```
 
 ---
 
