@@ -11,10 +11,8 @@ storageAccountName="volumedatamovies$rm"
 file_share_name="mysql-movies-volume"
 storage_key=$(az storage account keys list --resource-group $resourceGroup --account-name $storageAccountName --query "[0].value" --output tsv)
 keyVaultName="keyvault-$rm"
-
 # Registra o Serviço de ACI na Assinatura
 az provider register --namespace Microsoft.ContainerInstance
-
 # Deploy do Container MySQL
 az container create \
   --resource-group $resourceGroup \
