@@ -1,9 +1,7 @@
 # Variáveis
 # ALTERE PARA SEU RM
 rm=rm563409
-#
 storageAccountName="volumedatamovies$rm" 
-#
 file_share_name="mysql-movies-volume"
 resourceGroup="rg-movies-rm563409"
 location="chilecentral"
