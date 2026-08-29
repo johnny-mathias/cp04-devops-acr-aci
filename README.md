@@ -1,6 +1,7 @@
-# 🎬 Movies API — Deploy com Docker e Azure
+# CP04 de Cloud & DevOps - ACR e ACI
 
-Projeto de uma API de filmes utilizando **Spring Boot**, **MySQL**, **Docker** e serviços da **Microsoft Azure**.
+Java repo:  https://github.com/yJoaoVictor10/apiMovies-rm563409.git
+MySQL repo: https://github.com/yJoaoVictor10/mysqlMovies-rm563409.git
 
 ---
 
