@@ -294,7 +294,7 @@ docker rmi acrspringrm563409.azurecr.io/mysql-movies:v1
 # 🗄️ Configuração do MySQL
 
 
-#### 🖥️ VM
+#### ☁️ Azure CLI
 
 ## 16. Criando o Storage Account
 
@@ -303,13 +303,13 @@ docker rmi acrspringrm563409.azurecr.io/mysql-movies:v1
 
 ```bash
 chmod +x 01_store-account.sh
-./01_store-account.sh > 01_store-account.log
+./01_store-account.sh 
 ```
 
 
 ---
 
-#### 🖥️ VM
+#### ☁️ Azure CLI
 
 ## 🔐 17. Configurando o Azure Key Vault
 
@@ -318,13 +318,12 @@ chmod +x 01_store-account.sh
 
 ```bash
 chmod +x 02_key-vault.sh
-./02_key-vault.sh > 02_key-vault.log
-```
+./02_key-vault.sh 
 
 
 ---
 
-#### 🖥️ VM
+#### ☁️ Azure CLI
 
 ## 🐬 18. Criando o container MySQL
 
@@ -333,7 +332,7 @@ chmod +x 02_key-vault.sh
 
 ```bash
 chmod +x 03_aci-mysql.sh
-./03_aci-mysql.sh > 03_aci-mysql.log
+./03_aci-mysql.sh
 ```
 
 
@@ -373,7 +372,7 @@ select * from movie;
 # ☕ Deploy da API Java
 
 
-#### 🖥️ VM
+#### ☁️ Azure CLI
 
 ## 20. Criando o container da API
 
@@ -382,7 +381,7 @@ select * from movie;
 
 ```bash
 chmod +x 04_aci-api-java.sh
-./04_aci-api-java.sh > 04_aci-api-java.log
+./04_aci-api-java.sh 
 ```
 
 
