@@ -356,7 +356,7 @@ chmod +x 03_aci-mysql.sh
 ```bash
 az container exec \
     --resource-group rg-movies-rm563409 \
-    --name mysql-movies \
+    --name rm563409-mysql-movies \
     --exec-command "mysql -u user-movies -psenha-movies"
 ```
 
@@ -421,7 +421,7 @@ az container logs \
 ```bash
 az container exec \
     --resource-group rg-movies-rm563409 \
-    --name api-java \
+    --name rm563409-api-java \
     --exec-command "/bin/bash"
 ```
 
