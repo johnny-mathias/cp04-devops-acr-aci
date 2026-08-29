@@ -19,7 +19,6 @@ keyVaultName="keyvault-$rm"
 
 # Registra o Serviço do Key Vault na Assinatura
 az provider register --namespace Microsoft.KeyVault
-
 # Criar o Key Vault 
 #az keyvault create --name $keyVaultName --resource-group $resourceGroup --location $location
 if ! az keyvault show --name "$keyVaultName" --resource-group "$resourceGroup" &> /dev/null; then
