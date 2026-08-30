@@ -27,7 +27,7 @@ az container create \
   --registry-username $(az keyvault secret show --vault-name $keyVaultName --name acr-username --query value -o tsv) \
   --registry-password $(az keyvault secret show --vault-name $keyVaultName --name acr-password --query value -o tsv) \
   --environment-variables \
-    SPRING_DATASOURCE_URL=$(az keyvault secret show --name spring-datasource-url --vault-name $keyVaultName --query value -o tsv | sed "s/mysql-dimdim/$mysqlURL/") \
+    SPRING_DATASOURCE_URL=$(az keyvault secret show --name spring-datasource-url --vault-name $keyVaultName --query value -o tsv | sed "s/rm56409-mysql-movies/$mysqlURL/") \
     SPRING_DATASOURCE_USERNAME=$(az keyvault secret show --name spring-datasource-username --vault-name $keyVaultName --query value -o tsv) \
     SPRING_DATASOURCE_PASSWORD=$(az keyvault secret show --name spring-datasource-password --vault-name $keyVaultName --query value -o tsv) \
   --restart-policy Always
