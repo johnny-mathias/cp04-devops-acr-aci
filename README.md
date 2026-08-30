@@ -1,6 +1,7 @@
 # CP04 de Cloud & DevOps - ACR e ACI
 
 
+📽️ Vídeo: https://www.youtube.com/watch?v=awKL73gfVUU
 
 Java repo: https://github.com/yJoaoVictor10/apiMovies-rm563409.git
 
