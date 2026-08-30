@@ -7,7 +7,7 @@ MYSQL_ROOT_PASSWORD=senha-movies
 MYSQL_DATABASE=db-movies
 MYSQL_USER=user-movies
 MYSQL_PASSWORD=senha-movies
-SPRING_DATASOURCE_URL=jdbc:mysql://mysql-dimdim:3306/db-movies
+SPRING_DATASOURCE_URL=jdbc:mysql://mysql-rm563409:3306/db-movies
 SPRING_DATASOURCE_USERNAME=user-movies
 SPRING_DATASOURCE_PASSWORD=senha-movies
 CONNECTIONSTRINGS='Server=mysql-movies;Port=3306;Database=db-movies;User=user-movies;Password=senha-movies;'
